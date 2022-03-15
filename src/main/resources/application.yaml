@@ -1,28 +1,13 @@
 spring:
   datasource:
-    postgres:
-      hikari:
-        #password: postgres
-        schema: schema_postgres
-        pool-name: PostgresPool
-        jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
-        username: viru@virendrams2014gmail.onmicrosoft.com
-        idle-timeout: '10000'
-        maximum-pool-size: '15 '
-        auto-commit: 'true'
-        connection-timeout: '60000'
-        max-lifetime: '300000'
-        driver-class-name: org.postgresql.Driver
-        minimum-idle: '5'
-        type: com.zaxxer.hikari.HikariDataSource
+    jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/my_db
+    username: viru@virendrams2014gmail.onmicrosoft.com
+    #password: my_pass
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-test-query: SELECT 1
   jpa:
-    properties:
-      postgres:
-        hibernate:
-          hbm2ddl:
-            auto: update
-          format_sql: 'true'
-          dialect: org.hibernate.dialect.PostgreSQL10Dialect
-          show_sql: 'true'
-          use_sql_comments: 'true'
-          type: trace
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

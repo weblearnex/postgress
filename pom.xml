@@ -42,6 +42,19 @@
 			<artifactId>azure-identity</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+		</dependency>
+
+		<!-- this one is need for Hikari Configuration, because we will use prefix configuration -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- I use postgres -->
 
 
 	</dependencies>

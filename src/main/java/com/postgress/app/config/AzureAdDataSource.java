@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Component
-@ConfigurationProperties(prefix = "spring.datasource.postgres.hikari")
+@ConfigurationProperties(prefix = "spring.datasource")
 public class AzureAdDataSource extends HikariDataSource {
     private static final Logger logger = LoggerFactory.getLogger(AzureAdDataSource.class);
 
@@ -33,7 +33,7 @@ public class AzureAdDataSource extends HikariDataSource {
     }
 
     private static TokenRequestContext createRequestContext() {
-
         return new TokenRequestContext().addScopes("https://ossrdbms-aad.database.windows.net");
     }
+
 }
