@@ -1,20 +1,15 @@
-
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    hikari:
-      username: viru@virendrams2014gmail.onmicrosoft.com
-      jdbc-url: jdbc:postgresql://jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
+    initialization-mode: always
+    username: viru@virendrams2014gmail.onmicrosoft.com
+    url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
     platform: postgres
-    #password: root
+    #password: s$cret
   jpa:
-    generate-ddl: 'true'
-    database: POSTGRESQL
     properties:
       hibernate:
         jdbc:
           lob:
             non_contextual_creation: 'true'
-    show-sql: 'true'
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none

@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 @Component
 
-@ConfigurationProperties(prefix = "spring.datasource.hikari")
+@ConfigurationProperties(prefix = "spring.datasource")
 public class AzureAdDataSource extends HikariDataSource {
     Logger logger = (Logger) LoggerFactory.getLogger(AzureAdDataSource.class);
     private final SimpleTokenCache cache;
