@@ -5,17 +5,16 @@ import com.azure.core.credential.SimpleTokenCache;
 import com.azure.core.credential.TokenCredential;
 import com.azure.core.credential.TokenRequestContext;
 import com.zaxxer.hikari.HikariDataSource;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Component
-
 @ConfigurationProperties(prefix = "spring.datasource")
 public class AzureAdDataSource extends HikariDataSource {
-    Logger logger = (Logger) LoggerFactory.getLogger(AzureAdDataSource.class);
+    private static final Logger logger = LoggerFactory.getLogger(AzureAdDataSource.class);
+
     private final SimpleTokenCache cache;
 
     public AzureAdDataSource(TokenCredential credential) {
