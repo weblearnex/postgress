@@ -1,8 +1,6 @@
 spring:
   jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     #driver-class-name: org.postgresql.Driver
     hikari:
