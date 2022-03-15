@@ -1,12 +1,9 @@
 
 spring:
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    hibernate:
-      ddl-auto: create-drop
+  liquibase:
+    enabled: true
   datasource:
-    platform: postgres
-    url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
-    username: viru@virendrams2014gmail.onmicrosoft.com
-    driverClassName: org.postgresql.Driver
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
+      username: viru@virendrams2014gmail.onmicrosoft.com
