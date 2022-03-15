@@ -5,7 +5,7 @@ spring:
         #password: postgres
         schema: schema_postgres
         pool-name: PostgresPool
-        jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5433/testdb
+        jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
         username: viru@virendrams2014gmail.onmicrosoft.com
         idle-timeout: '10000'
         maximum-pool-size: '15 '
