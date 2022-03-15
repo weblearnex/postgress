@@ -1,6 +1,6 @@
 spring:
   datasource:
-    jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/my_db
+    jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
     username: viru@virendrams2014gmail.onmicrosoft.com
     #password: my_pass
     driver-class-name: org.postgresql.Driver
