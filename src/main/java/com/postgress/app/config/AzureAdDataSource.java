@@ -30,6 +30,6 @@ public class AzureAdDataSource extends HikariDataSource {
     }
 
     private static TokenRequestContext createRequestContext() {
-        return new TokenRequestContext().addScopes("https://ossrdbms-aad.database.windows.net/.default");
+        return new TokenRequestContext().addScopes("https://ossrdbms-aad.database.windows.net");
     }
 }
