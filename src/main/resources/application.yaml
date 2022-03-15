@@ -1,0 +1,8 @@
+spring:
+  liquibase:
+    enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
+      username: viru@virendrams2014gmail.onmicrosoft.com
