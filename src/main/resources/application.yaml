@@ -1,15 +1,28 @@
 spring:
   datasource:
-    initialization-mode: always
-    username: viru@virendrams2014gmail.onmicrosoft.com
-    url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
-    platform: postgres
-    #password: s$cret
+    postgres:
+      hikari:
+        #password: postgres
+        schema: schema_postgres
+        pool-name: PostgresPool
+        jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5433/testdb
+        username: viru@virendrams2014gmail.onmicrosoft.com
+        idle-timeout: '10000'
+        maximum-pool-size: '15 '
+        auto-commit: 'true'
+        connection-timeout: '60000'
+        max-lifetime: '300000'
+        driver-class-name: org.postgresql.Driver
+        minimum-idle: '5'
+        type: com.zaxxer.hikari.HikariDataSource
   jpa:
     properties:
-      hibernate:
-        jdbc:
-          lob:
-            non_contextual_creation: 'true'
-    hibernate:
-      ddl-auto: none
+      postgres:
+        hibernate:
+          hbm2ddl:
+            auto: update
+          format_sql: 'true'
+          dialect: org.hibernate.dialect.PostgreSQL10Dialect
+          show_sql: 'true'
+          use_sql_comments: 'true'
+          type: trace

@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Component
-@ConfigurationProperties(prefix = "spring.datasource")
+@ConfigurationProperties(prefix = "spring.datasource.postgres.hikari")
 public class AzureAdDataSource extends HikariDataSource {
     private static final Logger logger = LoggerFactory.getLogger(AzureAdDataSource.class);
 
