@@ -1,8 +1,11 @@
 spring:
-  liquibase:
-    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
   datasource:
-    driver-class-name: org.postgresql.Driver
+    #driver-class-name: org.postgresql.Driver
     hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
       jdbc-url: jdbc:postgresql://cml-postgress-db.postgres.database.azure.com:5432/testdb
       username: viru@virendrams2014gmail.onmicrosoft.com
